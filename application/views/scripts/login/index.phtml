@@ -1,0 +1,27 @@
+<div class="col-sm-12">
+    <div id="divlogin">
+        <img  id="logoLogin" class="img-responsive" src="images/logo.png" />
+        <form name="login" id="login" method="POST" class="form-horizontal">
+            <br/>
+            <div class="form-group">
+                <label for="Usuario" class="control-label col-sm-3">Usuario: <span class="color-red">&#42;</span></label>
+                <div class="col-sm-9">
+                    <input type="text" name="usuario" id="usuario" class="form-control" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label col-sm-3">Contrase&ntilde;a: <span class="color-red">&#42;</span></label>
+                <div class="col-sm-9">
+                    <input type="password" name="password" id="password" class="form-control" required/>
+                </div>
+            </div>
+            <br/>
+            <div>
+                <center>
+                <input type="submit" class="btn" name="login" id="login" value="Entrar   &#9658;">
+                </center>
+                <div id="errorLogin"></div>
+            </div>
+        </form>
+    </div>
+</div>

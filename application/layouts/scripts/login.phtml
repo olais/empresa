@@ -1,0 +1,59 @@
+<?php echo $this->doctype() ?>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php 
+            $this->headMeta()->prependHttpEquiv('Content-Type', 'text/html; charset=utf-8');
+            $this->headLink()->appendStylesheet($this->baseUrl('css/bootstrap/bootstrap.min.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/jquery-ui.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/estilo.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/estilos_txt.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/jquery-ui-1.10.4.custom.min.css'));
+            $this->headLink()->appendStylesheet($this->baseUrl('css/login.css'));
+            $this->headScript()->prependFile($this->baseUrl('js/jquery-1.12.3.min.js'), 'text/javascript');
+            $this->headScript()->appendFile($this->baseUrl('js/jquery-ui-custom.min.js'), 'text/javascript');
+            $this->headScript()->appendFile($this->baseUrl('js/bootstrap/bootstrap.min.js'), 'text/javascript');
+            $this->headScript()->appendFile($this->baseUrl('js/script.js'), 'text/javascript');
+
+
+            $this->headTitle()->append('Miapp/Corrugados');
+            echo $this->headMeta();
+            echo $this->headTitle(); 
+            echo $this->headLink();
+            echo $this->headScript();
+        ?>
+        <script>
+            var path = "<?php echo $this->baseUrl(); ?>";//por si queremos la url base en js
+        </script>
+    </head>
+    <body style="overflow-y:hidden">		
+        <header>
+            <div id="div-img-head">
+                <div class="container">
+                    <div class="row">
+                    <div id="header_imagen"></div>
+                        <div class="col-xs-12"><img src='images/logo.png' width="120"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div id="contenidobody">
+                <div class="container">
+                    <div class="row">
+                        <?= $this->layout()->content; ?>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                      <!--div id="notificaciones" class="col-xs-8 col-sm-3"></div-->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
